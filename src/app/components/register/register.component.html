@@ -1,0 +1,32 @@
+<mat-card class="register-container">
+    <mat-card-content class="flex-column">
+        <div>
+            <h1>Register your account</h1>
+        </div>
+        <form #data="ngForm" (ngSubmit)="onRegister(data.value)"  id="my-form">
+            <mat-form-field>
+                <mat-label class="my-form-label">Name</mat-label>
+                <input matInput placeholder="Name" #userInput maxlength="8" minlength="2"  name="name" ngModel required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label class="my-form-label">Surname</mat-label>
+                <input matInput type="Surname" matInput placeholder="Surname" #userInput maxlength="8" minlength="2"  name="surName" ngModel required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label class="my-form-label">E-mail</mat-label>
+                <input matInput type="Email" matInput placeholder="Email" #userInput maxlength="8" minlength="2"  name="email" ngModel required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label class="my-form-label">Postal Code</mat-label>
+                <input matInput type="Postal-code" matInput placeholder="Postal-code" #userInput maxlength="8" minlength="2"  name="postalcode" ngModel required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label class="my-form-label">Password</mat-label>
+                <input matInput type="password" matInput placeholder="Password" #userInput maxlength="8" minlength="2"  name="password" ngModel required>
+            </mat-form-field>
+
+            <button type="submit" mat-raised-button color="primary">Register</button>
+
+        </form>
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,45 @@
+<link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@700&family=Lugrasimo&display=swap" rel="stylesheet">
+<div class="cards">
+    <ul>
+        <li class="countryCard flex-column"  *ngFor="let country of countries; index as i">
+            {{country.name.common}}
+            <img class="flag" src={{country.flags.svg}}> 
+            <button id="selector" *ngIf="countryDetails==false" (click)="showCountryDetails()">SHOW DETAILS</button>
+            <button *ngIf="countryDetails==true" (click)="hideCountryDetails()">HIDE DETAILS</button>
+            <div *ngIf="countryDetails" class="country-details">
+                <ul class="flex-column">
+                <li> <b>Capital: </b>{{country.capital}}</li>
+                <li> <b>Continents: </b>{{country.continents[0]}}</li>
+                <li> <b>TimeZones: </b>{{country.timezones[0]}}</li>
+                <li> <b>Population: </b>{{country.population}}</li>
+                <li> <b>Curency: </b>{{country.curency}}</li>
+                <li> <b>Languages: </b>{{country.languages[0]}}</li>
+                <li class="align-coat-of-arms"> <b>Coat of Arms: </b><img class="coat-of-arms" src={{country.coatOfArms.svg}}></li>
+            </ul>
+            </div>
+        </li>
+    </ul>
+    <!-- <ul>
+        <li *ngFor="let user of jsonDummyData; index as i">{{i+0}} {{user.firstName}} {{user.lastName}}</li>
+    </ul>
+    {{jsonDummyData | json}}
+    {{toUppercase | uppercase}}
+    <br>
+    {{toLowercase | lowercase}}
+    <div>
+        {{countries[0].name.common | json}}
+    </div> 
+    {{countries | json }}
+    <div *ngIf="booleanValue">
+        Kurseong is known as the "Land of Glorious Sunsets" and the "white orchid of the eastern Himalayas".
+        The striking clock tower (pictured) is the only remnant of the ugly train yards that once occupied the present-day Riverfront Park in Spokane.
+        Many notable sights in Kashgar are tombs; of a leader, possibly a concubine, and two writers.
+    </div>
+    <div *ngIf="booleanValue == false">
+        <button (click)="onClickShowBoolean()"> Click me! </button>
+    </div>
+    <div *ngIf="booleanValue == true">
+        <button (click)="onClickHideBoolean()"> Click me! </button>
+    </div> -->
+    
+</div>

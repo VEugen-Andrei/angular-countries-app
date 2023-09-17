@@ -1,0 +1,20 @@
+<mat-card class="login-container">
+    <mat-card-content class="flex-column">
+        <div>
+            <h1>Sign in into your account</h1>
+        </div>
+        <form #data="ngForm" (ngSubmit)="onSubmit(data.value)" id="my-form">
+            <mat-form-field>
+                <mat-label class="my-form-label">Account</mat-label>
+                <input matInput placeholder="Username" #userInput maxlength="8" minlength="2"  name="userName" ngModel required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label class="my-form-label">Password</mat-label>
+                <input matInput type="password" matInput placeholder="Password" #userInput maxlength="8" minlength="2"  name="password" ngModel required>
+            </mat-form-field>
+
+            <button type="submit" mat-raised-button color="primary">Login</button>
+
+        </form>
+    </mat-card-content>
+</mat-card>
